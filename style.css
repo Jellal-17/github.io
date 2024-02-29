@@ -49,11 +49,14 @@ footer {
 
 .navbar ul {
     list-style-type: none;
-    padding: 0;
+    padding: auto;
+    margin: 0;
+    text-align: center;
 }
 
 .navbar li {
-    float: left;
+    display: inline-block;
+    padding: auto;
 }
 
 .navbar li a {
