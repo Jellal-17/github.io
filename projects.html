@@ -7,82 +7,56 @@
     <title>My Projects</title>
 </head>
 <body>
-    <!-- OVERLAY -->
-    <div class="overlay first"></div>
-    <div class="overlay second"></div>
-    <div class="overlay third"></div>
     <header class="l-header">
         <nav class="nav bd-grid">
-            <div>
-                <a href="index.html" class="nav__logo">Home</a>
-            </div>
-            <div class="nav__toggle" id="nav-toggle">
-                <ion-icon name="menu"></ion-icon>
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="index.html" class="nav__logo">Home</a></li>
+                    <li class="nav__item"><a href="thesis.html" class="nav__link">Thesis</a></li>
+                    <li class="nav__item"><a href="contact.html" class="nav__link">Contact</a></li>
+                </ul>
             </div>
         </nav>
     </header>
         
     <main class="container">
-        <h1>My Detailed Projects</h1>
-
-        <!-- Apple Counting-->
-        <section>
-            <article>
-                <h2>Apple counting using machine learning</h2>
-                <p>We have employed two machine learning techniques to accurately count apples in an orchard, streamlining agricultural processes. The first method used YoloV5s, a state-of-the-art object detection algorithm, and the second method was a conventional approach using a blob detection algorithm on top of a mask created using HSV colour space. The project aimed to compare the accuracy and efficiency of these two approaches. The results showed that YoloV5s performed better in accuracy and speed than the conventional image processing method.</p>
-                <div class="containeri">
-                    <img src="Images/mask_method.png" alt="mask">
-                </div>
-                <a href="Documents/Machine_Vision_Report.pdf" target="_blank">View the Report</a>
-            </article>
+        <h1 class="main-title">My Detailed Projects</h1>
+    
+        <section class="project">
+            <h2 class="project-title">Apple Counting Using Machine Learning</h2>
+            <p class="project-description">We have employed two machine learning techniques to accurately count apples in an orchard, streamlining agricultural processes. The first method used YoloV5s, a state-of-the-art object detection algorithm, and the second method was a conventional approach using a blob detection algorithm on top of a mask created using HSV colour space. The project aimed to compare the accuracy and efficiency of these two approaches. The results showed that YoloV5s performed better in accuracy and speed than the conventional image processing method.</p>
+            <div class="project-images">
+                <img src="Images/mask_method.png" alt="Apple counting mask method" class="project-image">
+            </div>
+            <a href="Documents/Machine_Vision_Report.pdf" class="project-report-link" target="_blank">View the Report</a>
         </section>
-
-
-        <!-- Social Robots-->
-        <section>
-            <article>
-                <h2>A Case Study of Socially and Physically Assistive Robots in Human-Robot Interaction</h2>
-                <p>We have Conducted an in-depth analysis of socially and physically assistive robots, examining their impact on human-robot interaction and potential applications in various settings. The two experiments discussed in the demonstrated the potential of socially and physically assistive robots in improving the quality of life for individuals with disabilities. In the first experiment, the socially assistive robot, Pepper, was able to assist a partially sighted social worker, Claudia, with various daily tasks. The results indicated that Pepper’s interaction with Claudia was positive and effective in assisting her with these tasks. The second experiment aimed to determine whether a TurtleBot3 robot could assist Claudia with her daily medication routine. The robot was programmed to deliver medication at specific times throughout the day directly to Claudia’s location, which was made possible by asking the robot to find the ’beacon location’ and navigate to that location on the map. The results showed that the robot could successfully deliver medication to Claudia at the stipulated time.</p>
-                <div class="containeri">
-                    <img src="Images/Pic1_pB.jpg" alt="part_b">
-                    <img src="Images/PartAFLc.jpg" alt="part-a">
-                </div>
-                <a href="Documents/Assistive_Group_Report.pdf" target="_blank">View the Report</a>
-            </article>
+    
+        <section class="project">
+            <h2 class="project-title">Socially and Physically Assistive Robots in Human-Robot Interaction</h2>
+            <p class="project-description">Conducted an in-depth analysis of socially and physically assistive robots, examining their impact on human-robot interaction and potential applications in various settings. The experiments demonstrated the potential of these robots in improving the quality of life for individuals with disabilities. Notably, the socially assistive robot, Pepper, was able to assist with daily tasks, and a TurtleBot3 robot successfully delivered medication at specific times, showcasing effective human-robot cooperation.</p>
+            <div class="project-images">
+                <img src="Images/Pic1_pB.jpg" alt="Social robot assisting in daily tasks" class="project-image">
+            </div>
+            <a href="Documents/Assistive_Group_Report.pdf" class="project-report-link" target="_blank">View the Report</a>
         </section>
-        
-
-        <!-- Path Traversing-->
-        <section> 
-            <article>
-                <h2>Path Traversing</h2>
-                <p>Condsidering the following scenarion, we had to program our mobile robot to overcome the situation. "The robot will be dropped into the ocean; it must autonomously survey the length of a pipeline to find an expected breakage and then return to its drop-off point to be recovered." This has been successfully completed using the Pololu 3Pi+ mobile robot. Using its sensors, the robot was programmed to navigate a black tape line on the provided map autonomously</p>
-                <div class="video-responsive">
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/HMx_csyI2F0?si=Q0QQj2HpHYP-zCym" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                </div>
-            </article>
+    
+        <section class="project">
+            <h2 class="project-title">Path Traversing</h2>
+            <p class="project-description">Our mobile robot was programmed to autonomously survey the length of a pipeline in the ocean, find a breakage, and return to its drop-off point. This was achieved using the Pololu 3Pi+ mobile robot, demonstrating advanced autonomous navigation and problem-solving capabilities in challenging environments.</p>
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/HMx_csyI2F0?si=Q0QQj2HpHYP-zCym" title="Path Traversing Demonstration" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen class="project-video"></iframe>
+            </div>
         </section>
-
-        <!-- Investigating odometry errors-->
-        <section> 
-            <article>
-                <h2>Investigating odometry errors caused during collisions due to bump sensors</h2>
-                <p>We have our improved robot accelerometer and encoder-based kinematics using sensor fusion for IR based collision avoidance. Collisions are generally undesired in mobile robots. Most of the systems use a submodule of collision avoidance. In this report, we investigate the errors caused due to collision and how it varies according to different robot parameters, i.e. speed and angles. In the 3pi+ robot, we made an assumption based on existing literature on how it creates an Odometry inaccuracy. Our results use the mean and variance of the recorded error to explain the error magnitude in different scenarios.</p>
-                <div class="image-container">
-                    <img src="Images/Drawing1.png" alt="inv_flow" class="resized-image">
-                </div>
-                <a href="Documents/Investigating_Odometry_error_caused_due_to_bump_sensors.pdf" target="_blank">View the Report</a>
-            </article>
+    
+        <section class="project">
+            <h2 class="project-title">Investigating Odometry Errors</h2>
+            <p class="project-description">This study focuses on the errors in odometry caused by collisions, analyzed through experiments with our improved robot incorporating accelerometer and encoder-based kinematics. The findings contribute to better understanding and mitigating collision-induced inaccuracies in mobile robotics, enhancing reliability and performance in autonomous navigation.</p>
+            <div class="image-container">
+                <img src="Images/Drawing1.png" alt="Odometry error investigation flowchart" class="project-image">
+            </div>
+            <a href="Documents/Investigating_Odometry_error_caused_due_to_bump_sensors.pdf" class="project-report-link" target="_blank">View the Report</a>
         </section>
-        
     </main>
-    <!-- GSAP -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.4/gsap.min.js"></script>
-
-    <!-- MAIN -->
-    <script src="main.js"></script>
-
-    <!-- ICONS -->
-    <script  type="module" src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons/ionicons.esm.js"></script>
+    
 </body>
 </html>

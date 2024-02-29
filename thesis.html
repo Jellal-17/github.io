@@ -8,82 +8,36 @@
 </head>
 <body>
 
-<nav id="navbar">
-    <ul>
-        <li><a href="index.html">Home</a></li>
-    </ul>
-</nav>
+    <header class="l-header">
+        <nav class="nav bd-grid">
 
-<main class="container">
-    <h1>Master's Thesis</h1>
-
-    <!-- Apple Counting-->
-    <section>
-        <article>
-            <h2>Threshold response models applied to best-of-n in Swarm Robotics</h2>
-            <p>Swarm robotics has emerged as a critical research area, particularly inspired by the collective behaviours and decentralized decision-making processes observed in social insects such as ants, and bees. This research aims to take inspiration from such natural social networks to offer a comprehensive exploration of threshold response models applied to the best-of-n problem in swarm robotics. The study builds upon existing theories and frameworks discussed in the literature, including natural swarm behaviours and decentralized control mechanisms, to offer a more balanced and effective approach to swarms that can choose from n>2 options. To validate these theoretical constructs, the research employs a rigorous simulation-based methodology. Various environmental conditions and constraints were considered to test the adaptability and resilience of the proposed models. The findings indicate significant improvements without compromising the quality of the decisions made by the swarm. In-depth discussions of these results reveal additional insights, such as the impact of threshold sensitivity on decision quality and the scalability challenges associated with an increasing number of options. While the study provides robust evidence in support of the proposed models, it also acknowledges limitations, primarily the reliance on simulation data. As such, future research directions include empirical validation using physical robot swarms and the fine-tuning of model parameters to adapt to specific environmental conditions. Overall, this dissertation serves as a contribution to the field of swarm robotics, offering a theoretically grounded, robust, and efficient model for decentralized decision-making in complex, dynamic settings.</p>
-            <div class="container">
-                <img src="Images/network_thesis.png" alt="thes">
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="index.html" class="nav__logo">Home</a></li>
+                    <li class="nav__item"><a href="projects.html" class="nav__link">Projects</a></li>
+                    <li class="nav__item"><a href="contact.html" class="nav__link">Contact</a></li>
+                </ul>
             </div>
-            <a href="Documents/Threshold_Response_Model(Final Submission).pdf" target="_blank">Thesis Document</a>
-        </article>
-    </section>
-    
-</main>
+        </nav>
+
+
+        <div class="nav__toggle" id="nav-toggle">
+            <ion-icon name="menu"></ion-icon>
+        </div>
+    </header>
+
+    <main class="container">
+        <h1 class="main-title">Master's Thesis</h1>
+
+        <section class="project">
+                <h2 class="project-title">Threshold response models applied to best-of-n in Swarm Robotics</h2>
+                <p class="project-description">Swarm robotics has emerged as a critical research area, particularly inspired by the collective behaviours and decentralized decision-making processes observed in social insects such as ants, and bees. This research aims to take inspiration from such natural social networks to offer a comprehensive exploration of threshold response models applied to the best-of-n problem in swarm robotics. The study builds upon existing theories and frameworks discussed in the literature, including natural swarm behaviours and decentralized control mechanisms, to offer a more balanced and effective approach to swarms that can choose from n>2 options. To validate these theoretical constructs, the research employs a rigorous simulation-based methodology. Various environmental conditions and constraints were considered to test the adaptability and resilience of the proposed models. The findings indicate significant improvements without compromising the quality of the decisions made by the swarm. In-depth discussions of these results reveal additional insights, such as the impact of threshold sensitivity on decision quality and the scalability challenges associated with an increasing number of options. While the study provides robust evidence in support of the proposed models, it also acknowledges limitations, primarily the reliance on simulation data. As such, future research directions include empirical validation using physical robot swarms and the fine-tuning of model parameters to adapt to specific environmental conditions. Overall, this dissertation serves as a contribution to the field of swarm robotics, offering a theoretically grounded, robust, and efficient model for decentralized decision-making in complex, dynamic settings.</p>
+                <div class="project-images">
+                    <img src="Images/network_thesis.png" alt="thes" class="project-image"> 
+                </div>
+                <a href="Documents/Threshold_Response_Model(Final Submission).pdf"  class="project-report-link" target="_blank">Thesis Document</a>
+        </section>
+        
+    </main>
 </body>
 </html>
-
-<main class="container">
-
-    <div class="grid">
-        <section>
-            <hgroup>
-                <h2>About Me</h2>
-                <h3>Roboticist</h3>
-            </hgroup>
-            <p>Imagine a passionate and forward-thinking Robotics Master's student from the University of Bristol, where creativity meets expertise. With a solid background in mechanical engineering and a flair for machine learning, I craft cutting-edge solutions for autonomous systems. My journey is about embracing challenges, learning continuously, and making a real difference in the dynamic world of robotics. I am on the lookout for opportunities that not only fuel my growth but also allow me to leave a tangible mark on the future.</p>
-            <!--
-            <figure>
-                <img src="https://source.unsplash.com/featured/?robotics" alt="Robotics" />
-                <figcaption>Exploring Robotics</figcaption>
-            </figure>
-            -->
-            
-            <!-- Projects Section -->
-            <h3>My Projects</h3>
-
-            <!-- Projects -->
-            <p>Here are some of my notable projects in robotics...</p>
-            
-            <section>
-                
-                <!-- Apple Counting-->
-                <article>
-                    <h4>Apple counting using machine learning</h4>
-                    <p>We have employed two machine learning techniques to accurately count apples in an orchard, streamlining agricultural processes.</p>
-                </article>
-
-                <!-- Social Robots-->
-                <article>
-                    <h4>A Case Study of Socially and Physically Assistive Robots in Human-Robot Interaction</h4>
-                    <p>We have Conducted an in-depth analysis of socially and physically assistive robots, examining their impact on human-robot interaction and potential applications in various settings.</p>
-                </article>
-                
-
-            </section>
-
-            <p>For more details, please visit the projects page</p>
-            <a href="projects.html">View in detail</a>
-
-            <h3>Thesis</h3>
-            <section>
-                <!-- Threshold Response -->
-            <article>
-                <h4>Threshold Response Model Applied to Best-of-n problem in swarm robots</h4>
-                <p>This research aims to take inspiration from natural social networks such as an ant colony or a bee hive or even societal norms, to offer a comprehensive exploration of threshold response models applied to the best-of-n problem in swarm robotics.</p>
-                <a href="thesis.html">View in detail</a>
-            </article>
-            </section>
-        </section>
-    </div>
-</main>
