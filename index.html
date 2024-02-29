@@ -1,86 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
-    <title>Robotics Portfolio</title>
-</head>
-<body>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <title>Robotics Portfolio</title>
+    </head>
+    <body>
+        <!-- OVERLAY -->
+        <div class="overlay first"></div>
+        <div class="overlay second"></div>
+        <div class="overlay third"></div>
+        <!-- HEADER -->
+        <header class="l-header">
+            <nav class="nav bd-grid">
+                <div>
+                    <a href="index.html" class="nav__logo">Sathvik's Portfolio</a>
+                </div>
 
-    <nav class="navbar">
-        <ul class="nav-links">
-            <li><strong>Sathvik's Perosnal Portfolio</strong></li>
-        </ul>
+                <div class="nav__menu" id="nav-menu">
+                    <ul class="nav__list">
+                        <li class="nav__item"><a href="projects.html" class="nav__link">Projects</a></li>
+                        <li class="nav__item"><a href="thesis.html" class="nav__link">Thesis</a></li>
+                        <li class="nav__item"><a href="#" class="nav__link">Contact</a></li>
+                    </ul>
+                </div>
 
-        <ul>
-            <li><a href="projects.html">Projects</a></li>
-            <li><a href="thesis.html">Thesis</a></li>
-            <li><a href="#">Contact</a></li>
-        </ul>
-    </nav>
-      
-<main class="container">
+                <div class="nav__toggle" id="nav-toggle">
+                    <ion-icon name="menu"></ion-icon>
+                </div>
+            </nav>
+        </header>
+        <!-- MAIN -->
+        <main class="l-main bd-grid">
+            <div class="home">
+                <div class="home__information">
+                    <span class="home__pressent anime-text">Hello, My name is</span>
+                    <h1 class="home__title anime-text">Sathvik Kadimisetty</h1>
+                    <span class="home__skill anime-text">Roboticist</span>
+                    
+                    <div>
+                        <a href="/Documents/Sathvik's CVRob_withoutref.pdf" class="home__button anime-text">DOWNLOAD CV</a>
+                    </div>
+                </div>
 
-    <div class="grid">
-        <section>
-            <hgroup>
-                <h2>About Me</h2>
-                <h3>Roboticist</h3>
-            </hgroup>
-            <p>Imagine a passionate and forward-thinking Robotics Master's student from the University of Bristol, where creativity meets expertise. With a solid background in mechanical engineering and a flair for machine learning, I craft cutting-edge solutions for autonomous systems. My journey is about embracing challenges, learning continuously, and making a real difference in the dynamic world of robotics. I am on the lookout for opportunities that not only fuel my growth but also allow me to leave a tangible mark on the future.</p>
-            <!--
-            <figure>
-                <img src="https://source.unsplash.com/featured/?robotics" alt="Robotics" />
-                <figcaption>Exploring Robotics</figcaption>
-            </figure>
-            -->
-            
-            <!-- Projects Section -->
-            <h3>My Projects</h3>
-
-            <!-- Projects -->
-            <p>Here are some of my notable projects in robotics...</p>
-            
-            <section>
+                <div class="home__img">
+                    <img src="Images/R2D2_1.webp" alt="homepage">
+                </div>
                 
-                <!-- Apple Counting-->
-                <article>
-                    <h4>Apple counting using machine learning</h4>
-                    <p>We have employed two machine learning techniques to accurately count apples in an orchard, streamlining agricultural processes.</p>
-                </article>
+                <div class="home__social">
+                    <a class="nav__link" href="https://www.linkedin.com/in/sathvikkadimisetty/"><ion-icon name="logo-linkedin" class="home__social-icon"></ion-icon></a>
+                    <a class="nav__link" href="https://www.instagram.com/sathvik1711/"><ion-icon name="logo-instagram" class="home__social-icon"></ion-icon></a>
+                    <a class="nav__link" href="mailto:satvik.kadimisetty2@gmail.com"><ion-icon name="logo-teams" class="home__social-icon"></ion-icon></a>
+                </div>
 
-                <!-- Social Robots-->
-                <article>
-                    <h4>A Case Study of Socially and Physically Assistive Robots in Human-Robot Interaction</h4>
-                    <p>We have Conducted an in-depth analysis of socially and physically assistive robots, examining their impact on human-robot interaction and potential applications in various settings.</p>
-                </article>
-                
+            </div>
+        </main>
 
-            </section>
+        <!-- GSAP -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.4/gsap.min.js"></script>
 
-            <p>For more details, please visit the projects page</p>
-            <a href="projects.html">View in detail</a>
-
-            <h3>Thesis</h3>
-            <section>
-                <!-- Threshold Response -->
-            <article>
-                <h4>Threshold Response Model Applied to Best-of-n problem in swarm robots</h4>
-                <p>This research aims to take inspiration from natural social networks such as an ant colony or a bee hive or even societal norms, to offer a comprehensive exploration of threshold response models applied to the best-of-n problem in swarm robotics.</p>
-                <a href="thesis.html">View in detail</a>
-            </article>
-            </section>
-        </section>
-    </div>
-</main>
-
-<footer class="container">
-    <section aria-label="LinkedIN">
-        <div class="container">
-            <p>Feel free to reach out to me at <a href="mailto:satvik.kadimisetty2@gmail.com">satvik.kadimisetty2@gmail.com</a> or connect with me on <a href="https://www.linkedin.com/in/sathvikkadimisetty/" target="_blank">LinkedIn</a>.</p>
-        </div>
-    </section>
-</footer>
-</body>
-</html>
+        <!-- MAIN -->
+        <script src="main.js"></script>
+    
+        <!-- ICONS -->
+        <script  type="module" src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons/ionicons.esm.js"></script>
+    
+    </body>
+    </html>
