@@ -1,3 +1,13 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
+
+/* body {
+  font-family: system-ui, sans-serif;
+} */
+
+html {
+  scroll-behavior: smooth;
+}
+
 .video-responsive {
     overflow: hidden;
     padding-bottom: 56.25%;
@@ -39,7 +49,46 @@
   }
   
 
-  @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
+/* ─── Global typography & base styles ─── */
+body {
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--white-color);
+  background-color: var(--black-color);
+  font-weight: 400;
+}
+p, li {
+  font-weight: 400;
+}
+
+/* ─── Containers & sections ─── */
+.container,
+.contact-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+.section {
+  padding: 4rem 0;
+}
+
+/* ─── Section titles ─── */
+.main-title {
+  font-size: 2.5rem;
+  margin: 2rem 0 1.5rem;
+  color: var(--white-color);
+  text-align: center;
+}
+
+/* ─── Button & link hover states ─── */
+a:hover,
+.project-report-link:hover,
+.hero__button:hover,
+.contact-form button:hover {
+  opacity: 0.85;
+  transition: opacity 0.2s ease;
+}
+
   /*----- VARIABLES CSS Y SASS -----*/
   /*Varibles sass*/
   /*Variables css*/
@@ -97,13 +146,18 @@
   }
   
   ul {
-    margin: 0;
-    padding: 0;
-    list-style: none;
+    list-style-type: disc;
+    margin-left: 1.5em;       /* indent */
   }
   
   a {
     text-decoration: none;
+  }
+
+  p {
+    display: list-item;       /* makes the p behave like a list item */
+    list-style-type: square;  /* square marker */
+    margin-left: 1.5em;       /* indent to line up under the marker */
   }
   
   img {
@@ -160,7 +214,12 @@
   }
   
   .nav__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
     text-align: center;
+    display: flex;
+    gap: 2rem;
   }
   
   .nav__item {
@@ -168,13 +227,31 @@
   }
   
   .nav__link {
-    color: var(--text-color);
+    color: var(--white-color);
   }
   
   .nav__link:hover {
     position: relative;
+    color: var(--first-color);
   }
   
+  .nav__link.active,
+  .nav__link.active {
+    color: var(--first-color);
+  }
+
+  .nav__link.active::after,
+  .nav__logo.active::after {
+    /* content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: var(--first-color);
+    bottom: -4px;
+    left: 0; */
+    display: none !important;
+  }
+
   .nav__link:hover::after {
     position: absolute;
     content: '';
@@ -282,7 +359,7 @@
   /*----- MEDIA QUERIES -----*/
   @media screen and (min-width: 768px) {
     body {
-      margin: 0; 
+      margin-top: 4rem; 
       
     }
     .l-main {
@@ -344,11 +421,11 @@
   
   /*ANIMATE*/
   .overlay {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
+    height: 100vh;
     z-index: var(--z-modal);
   }
   
@@ -381,12 +458,12 @@
 /* Project section styling */
 .project {
   margin-bottom: 50px;
-  border-bottom: 1px solid #ff0000; /* Adds a light line between projects */
+  border-bottom: 1px solid var(--first-color); /* Adds a light line between projects */
   padding-bottom: 20px;
 }
 
 .project-title {
-  color: #ff0000e7;
+  color: var(--first-color);
   font-size: 24px;
   margin-bottom: 15px;
 }
@@ -494,4 +571,197 @@
       flex-direction: column;
       gap: 15px;
   }
+}
+
+
+/* ─── Hero section ─── */
+.hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  min-height: calc(100vh - 4rem);
+  gap: 2rem;
+  padding: 2rem 1rem;
+}
+.hero__title {
+  font-size: 2.5rem !important;
+  margin-bottom: 1.2;
+}
+.hero__subtitle {
+  font-size: 1.5rem !important;
+  line-height: 1.4;
+  margin-bottom: 1.5rem;
+}
+.hero__button {
+  display: inline-block;
+  padding: .75rem 1.5rem;
+  border-radius: .5rem;
+  background: var(--first-color);
+  color: var(--white-color);
+  text-transform: uppercase;
+  font-weight: 700;
+  text-decoration: none;
+}
+.hero__image img {
+  width: 150%;
+  height: auto;
+  border-radius: 8px;
+}
+
+/* Mobile tweak */
+@media (max-width: 768px) {
+  .hero {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  .hero__image {
+    display: none; /* hide on small screens */
+  }
+}
+
+
+/* ─── Projects card grid ─── */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  align-items: start;
+}
+
+.card {
+  background: var(--white-color);
+  color: var(--black-color);
+  border-radius: .5rem;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  display: block;
+  /* flex-direction: column; */
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+}
+
+.card-content {
+  padding: 1rem;
+  /* flex: 1; */
+}
+
+.card-content h3 {
+  margin: 0 0 .5rem;
+  color: var(--first-color);
+  font-size: var(--h2-font-size);
+}
+
+.card-content p,
+.card-content ul {
+  font-weight: 400;
+  font-size: var(--normal-font-size);
+  margin-bottom: 1rem;
+}
+
+.card-content ul {
+  padding-inline-start: 1.25rem;
+}
+
+.card-actions {
+  padding: 0 1rem 1rem;
+  text-align: right;
+}
+
+/* hide the body by default */
+.card-body {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease, padding 0.3s ease;
+  padding: 0 1rem; /* remove vertical padding initially */
+}
+
+/* reveal on hover */
+.card:hover .card-body {
+  max-height: 1000px;      /* large enough for any content */
+  padding: 1rem;           /* restore vertical padding */
+}
+
+/* ensure the header stays visible */
+.card-header {
+  background: var(--white-color);
+  padding: 1rem;
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+
+
+/* Fallback for narrow screens */
+@media (max-width: 768px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+/* ─── “Work” dropdown in nav ─── */
+.has-dropdown {
+  position: relative;
+}
+.dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: var(--black-color);
+  list-style: none;
+  margin: 0;
+  display: none;
+  flex-direction: column;
+  padding: 0.5rem 1rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.4);
+  border-radius: 0.25rem;
+  gap: 1rem;
+}
+.has-dropdown:hover .dropdown {
+  display: flex;
+}
+.dropdown .nav__link {
+  margin: 0.25rem 0;
+}
+
+/* On mobile, let dropdown items stack inside the main menu */
+@media (max-width: 768px) {
+  .dropdown {
+    position: static;
+    box-shadow: none;
+    padding-left: 1rem;
+  }
+}
+
+/* ─── Contact Form ─── */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: .75rem 1rem;
+  border: 1px solid #ccc;
+  border-radius: .5rem;
+  font-size: var(--normal-font-size);
+}
+
+.contact-form button {
+  align-self: flex-start;
+  padding: .75rem 1.5rem;
+  background: var(--first-color);
+  color: var(--white-color);
+  border: none;
+  border-radius: .5rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.contact-form button:hover {
+  opacity: 0.9;
 }

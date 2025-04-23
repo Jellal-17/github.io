@@ -4,15 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="style.css">
+    <!-- Ionicons for the hamburger icon -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
     <title>My Projects</title>
 </head>
 <body>
     <header class="l-header">
         <nav class="nav bd-grid">
+            <div class="nav__toggle" id="nav-toggle">
+                <ion-icon name="menu-outline"></ion-icon>
+            </div>
             <div class="nav__menu" id="nav-menu">
                 <ul class="nav__list">
                     <li class="nav__item"><a href="index.html" class="nav__logo">Home</a></li>
-                    <li class="nav__item"><a href="thesis.html" class="nav__link">Thesis</a></li>
+                    <li class="nav__item"><a href="about.html" class="nav__link">About</a></li>
+                    <li class="nav__item has-dropdown">
+                        <a href="#" class="nav__link">Work</a>
+                        <ul class="dropdown">
+                            <li><a href="projects.html" class="nav__link active">Projects</a></li>
+                            <li><a href="thesis.html" class="nav__link">Master’s Thesis</a></li>
+                        </ul>
+                    </li>
                     <li class="nav__item"><a href="contact.html" class="nav__link">Contact</a></li>
                 </ul>
             </div>
@@ -20,49 +33,179 @@
     </header>
         
     <main class="container">
-        <h1 class="main-title">My Detailed Projects</h1>
-    
-        <section class="project">
-            <h2 class="project-title">Apple Counting Using Machine Learning</h2>
-            <p class="project-description">We have employed two machine learning techniques to accurately count apples in an orchard, streamlining agricultural processes. The first method used YoloV5s, a state-of-the-art object detection algorithm, and the second method was a conventional approach using a blob detection algorithm on top of a mask created using HSV colour space. The project aimed to compare the accuracy and efficiency of these two approaches. The results showed that YoloV5s performed better in accuracy and speed than the conventional image processing method.</p>
-            <div class="project-images">
-                <img src="Images/mask_method.png" alt="Apple counting mask method" class="project-image">
+        <h1 class="main-title">My Projects</h1>
+      
+        <div class="projects-grid">
+      
+          <!-- A1-RealViz -->
+          <div class="card">
+            <div class="card-header">
+                <h3>A1-RealViz</h3>
             </div>
-            <a href="Documents/Machine_Vision.pdf" class="project-report-link" target="_blank">View the Report</a>
-        </section>
-    
-        <section class="project">
-            <h2 class="project-title">Socially and Physically Assistive Robots in Human-Robot Interaction</h2>
-            <p class="project-description">Conducted an in-depth analysis of socially and physically assistive robots, examining their impact on human-robot interaction and potential applications in various settings. The experiments demonstrated the potential of these robots in improving the quality of life for individuals with disabilities. Notably, the socially assistive robot, Pepper, was able to assist with daily tasks, and a TurtleBot3 robot successfully delivered medication at specific times, showcasing effective human-robot cooperation.</p>
-            <div class="project-images">
-                <img src="Images/Pic1_pB.jpg" alt="Social robot assisting in daily tasks" class="project-image">
+            <div class="card-body">
+                <p>A real-time visualization and control tool for the Unitree A1 robot, featuring:</p>
+                <ul>
+                    <li>Interactive joint-control sliders to command the robot’s joints.</li>
+                    <li>Real-time plots of joint positions & foot forces.</li>
+                    <li>Synchronized Gazebo and RViz views.</li>
+                </ul>
+                <div class="card-actions">
+                    <a href="https://github.com/Jellal-17/A1-RealViz" class="project-report-link" target="_blank">
+                        View on GitHub
+                    </a>
+                </div>
             </div>
-            <a href="Documents/Social_Robots.pdf" class="project-report-link" target="_blank">View the Report</a>
-        </section>
-    
-        <section class="project">
-            <h2 class="project-title">Path Traversing</h2>
-            <p class="project-description">Our mobile robot was programmed to autonomously survey the length of a pipeline in the ocean, find a breakage, and return to its drop-off point. This was achieved using the Pololu 3Pi+ mobile robot, demonstrating advanced autonomous navigation and problem-solving capabilities in challenging environments.</p>
-            <div class="video-container">
-                <iframe src="https://www.youtube.com/embed/HMx_csyI2F0?si=Q0QQj2HpHYP-zCym" title="Path Traversing Demonstration" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen class="project-video"></iframe>
+          </div>
+      
+          <!-- Steel Defect Detection -->
+          <div class="card">
+            <div class="card-header">
+                <h3>Steel Defect Detection</h3>
             </div>
-        </section>
-    
-        <section class="project">
-            <h2 class="project-title">Investigating Odometry Errors</h2>
-            <p class="project-description">This study focuses on the errors in odometry caused by collisions, analyzed through experiments with our improved robot incorporating accelerometer and encoder-based kinematics. The findings contribute to better understanding and mitigating collision-induced inaccuracies in mobile robotics, enhancing reliability and performance in autonomous navigation.</p>
-            <div class="image-container">
-                <img src="Images/Drawing1.png" alt="Odometry error investigation flowchart" class="project-image">
+            <div class="card-body">
+                <p>Implements a U-Net semantic segmentation model to spot defects on steel surfaces:</p>
+                <ul>
+                    <li>UNet for pixel-level defect masks.</li>
+                    <li>Real-time inference pipeline.</li>
+                    <li>Evaluated via Dice coefficient & IoU metrics.</li>
+                </ul>
+                <div class="card-actions">
+                    <a href="https://github.com/Jellal-17/Steel-Defect-Detection" class="project-report-link" target="_blank">
+                    View on GitHub
+                    </a>
+                </div>
+            </div>  
+          </div>
+      
+          <!-- EEG Signal Classification -->
+          <div class="card">
+            <div class="card-header">
+                <h3>EEG Signal Classification</h3>
             </div>
-            <a href="Documents/Odometry.pdf" class="project-report-link" target="_blank">View the Report</a>
-        </section>
-
-        <section class="project">
-            <h2 class="project-title">Nao as a Mediataion Assistant</h2>
-            <p class="project-description">A user study was conducted involving two experimental conditions with NAO robot as the meditation assistant and another with a smartphone app guiding a video. The study sought to assess the impact of the robot on participants’ emotional state and stress levels.</p>
-            <a href="Documents/22071773_UFMFHP-15-M Human-Robot Interaction.pdf" class="project-report-link" target="_blank">View the Report</a>
-        </section>
-    </main>
-    
+            <div class="card-body">
+                <p>ML pipeline to classify EEG signals into hand gestures, enabling intuitive robot control:</p>
+                <ul>
+                    <li>Preprocessed EEG data (noise removal, feature extraction).</li>
+                    <li>Designed & trained classification models.</li>
+                    <li>Validated accuracy & robustness on experimental datasets.</li>
+                </ul>
+                <div class="card-actions">
+                    <a href="https://github.com/Jellal-17" class="project-report-link" target="_blank">
+                        GitHub Profile
+                    </a>
+                </div>
+            </div>
+          </div>
+      
+          <!-- Apple Counting Using Machine Learning -->
+          <div class="card">
+            <div class="card-header">
+              <h3>Apple Counting Using Machine Learning</h3>
+            </div>
+            <div class="card-body">
+              <p>Compared two methods for counting apples in an orchard:</p>
+              <ul>
+                <li>YOLOv5s object detection.</li>
+                <li>Blob detection on HSV-masked images.</li>
+                <li>Benchmarked accuracy and speed.</li>
+              </ul>
+              <img src="Images/mask_method.png" alt="Apple counting mask method">
+              <div class="card-actions">
+                <a href="Documents/Machine_Vision.pdf" class="project-report-link" target="_blank">
+                  View the Report
+                </a>
+              </div>
+            </div>
+          </div>
+      
+          <!-- Socially and Physically Assistive Robots -->
+          <div class="card">
+            <div class="card-header">
+                <h3>Socially & Physically Assistive Robots in HRI</h3>
+              </div>
+            <div class="card-body">
+              <p>Analysis of assistive robots’ impact on human-robot interaction:</p>
+              <ul>
+                <li>Pepper assisting with daily tasks.</li>
+                <li>TurtleBot3 delivering medication on schedule.</li>
+                <li>Evaluated user satisfaction & effectiveness.</li>
+              </ul>
+              <img src="Images/Pic1_pB.jpg" alt="Social robot assisting in daily tasks">
+              <div class="card-actions">
+                <a href="Documents/Social_Robots.pdf" class="project-report-link" target="_blank">
+                  View the Report
+                </a>
+              </div>
+            </div>
+          </div>
+      
+          <!-- Path Traversing -->
+          <div class="card">
+            <div class="card-header">
+              <h3>Path Traversing</h3>
+            </div>
+            <div class="card-body">
+              <p>Autonomous mobile robot surveying an underwater pipeline to find breakages and return:</p>
+              <ul>
+                <li>Based on Pololu 3Pi+ platform.</li>
+                <li>Advanced navigation in challenging environments.</li>
+              </ul>
+              <div class="video-container">
+                <iframe
+                  src="https://www.youtube.com/embed/HMx_csyI2F0?si=Q0QQj2HpHYP-zCym"
+                  title="Path Traversing Demonstration"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowfullscreen>
+                </iframe>
+              </div>
+            </div>
+          </div>
+      
+          <!-- Investigating Odometry Errors -->
+          <div class="card">
+            <div class="card-header">
+              <h3>Investigating Odometry Errors</h3>
+            </div>
+            <div class="card-body">
+              <p>Study on collision-induced odometry errors using accelerometer & encoder data:</p>
+              <ul>
+                <li>Designed experiments with enhanced robot platform.</li>
+                <li>Characterized and mitigated error sources.</li>
+              </ul>
+              <img src="Images/Drawing1.png" alt="Odometry error investigation flowchart">
+              <div class="card-actions">
+                <a href="Documents/Odometry.pdf" class="project-report-link" target="_blank">
+                  View the Report
+                </a>
+              </div>
+            </div>
+          </div>
+      
+          <!-- Nao as a Meditation Assistant -->
+          <div class="card">
+            <div class="card-header">
+              <h3>Nao as a Meditation Assistant</h3>
+            </div>
+            <div class="card-body">
+              <p>User study comparing NAO robot-guided meditation vs. smartphone video:</p>
+              <ul>
+                <li>Measured emotional state & stress levels.</li>
+                <li>Analyzed impact of physical robot presence.</li>
+              </ul>
+              <div class="card-actions">
+                <a href="Documents/22071773_UFMFHP-15-M%20Human-Robot%20Interaction.pdf"
+                   class="project-report-link"
+                   target="_blank">
+                  View the Report
+                </a>
+              </div>
+            </div>
+          </div>
+      
+        </div>
+      </main>
+      
+    <script src="main.js"></script>
 </body>
 </html>

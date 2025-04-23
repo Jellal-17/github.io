@@ -12,6 +12,26 @@ const showMenu = (toggleId, navId) =>{
 
 showMenu('nav-toggle','nav-menu')
 
+/* CLOSE MENU ON LINK CLICK */
+// listen on _all_ nav links, including the logo
+const navLinks = document.querySelectorAll('.nav__link, .nav__logo');
+navLinks.forEach(link => {
+  link.addEventListener('click', () => {
+    document.getElementById('nav-menu').classList.remove('show');
+  });
+});
+
+/* NAV LINK ACTIVE STATE */
+const currentPage = window.location.pathname.split("/").pop();
+const navItems = document.querySelectorAll('.nav__link, .nav__logo');
+
+navItems.forEach(link => {
+  // If href matches this HTML filename, mark it active
+  if (link.getAttribute('href') === currentPage) {
+    link.classList.add('active');
+  }
+});
+
 /*----- ANIMATE -----*/
 // OVERLAY
 gsap.to(".first", 1.5, {delay: .5, top: "-100%", ease: Expo.easeInOut});

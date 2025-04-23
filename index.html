@@ -3,8 +3,8 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Sri Sai Sathvik Kadimisetty - Portfolio</title>
         <link rel="stylesheet" href="style.css">
-        <title>Robotics Portfolio</title>
     </head>
     <body>
         <!-- OVERLAY -->
@@ -15,13 +15,19 @@
         <header class="l-header">
             <nav class="nav bd-grid">
                 <div>
-                    <a href="index.html" class="nav__logo">Sathvik's Portfolio</a>
+                    <a href="index.html" class="nav__logo active">Sathvik's Portfolio</a>
                 </div>
 
                 <div class="nav__menu" id="nav-menu">
                     <ul class="nav__list">
-                        <li class="nav__item"><a href="projects.html" class="nav__link">Projects</a></li>
-                        <li class="nav__item"><a href="thesis.html" class="nav__link">Thesis</a></li>
+                        <li class="nav__item"><a href="about.html" class="nav__link">About</a></li>
+                        <li class="nav__item has-dropdown">
+                            <a href="#" class="nav__link">Work</a>
+                            <ul class="dropdown">
+                                <li><a href="projects.html" class="nav__link">Projects</a></li>
+                                <li><a href="thesis.html" class="nav__link">Master’s Thesis</a></li>
+                            </ul>
+                        </li>
                         <li class="nav__item"><a href="contact.html" class="nav__link">Contact</a></li>
                     </ul>
                 </div>
@@ -33,28 +39,17 @@
         </header>
         <!-- MAIN -->
         <main class="l-main bd-grid">
-            <div class="home">
-                <div class="home__information">
-                    <span class="home__pressent anime-text">Hello, My name is</span>
-                    <h1 class="home__title anime-text">Sathvik Kadimisetty</h1>
-                    <span class="home__skill anime-text">Roboticist</span>
-                    
-                    <div>
-                        <a href="Sathvik_EuroFCV.pdf" class="home__button anime-text">DOWNLOAD CV</a>
-                    </div>
+            <section id="home" class="hero l-main">
+                <div class="hero__content">
+                  <h1 class="hero__title">Hello, I’m Sathvik Kadimisetty</h1>
+                  <h1 class="hero__subtitle">Research Assistant & Roboticist</h1>
+                  <a href="about.html" class="hero__button">Learn More</a>
                 </div>
+                <div class="hero__image">
+                  <img src="Images/R2D2_1.webp" alt="Robot illustration">
+                </div>
+              </section>
 
-                <div class="home__img">
-                    <img src="Images/R2D2_1.webp" alt="homepage">
-                </div>
-                
-                <div class="home__social">
-                    <a class="nav__link" href="https://www.linkedin.com/in/sathvikkadimisetty/"><ion-icon name="logo-linkedin" class="home__social-icon"></ion-icon></a>
-                    <a class="nav__link" href="https://www.instagram.com/sathvik1711/"><ion-icon name="logo-instagram" class="home__social-icon"></ion-icon></a>
-                    <a class="nav__link" href="mailto:satvik.kadimisetty2@gmail.com"><ion-icon name="mail" class="home__social-icon"></ion-icon></a>
-                </div>
-
-            </div>
         </main>
 
         <!-- GSAP -->
