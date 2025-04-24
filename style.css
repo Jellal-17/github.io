@@ -765,3 +765,10 @@ a:hover,
 .contact-form button:hover {
   opacity: 0.9;
 }
+
+@media (max-width: 768px) {
+  /* kill the intro panels on mobile, so header/nav is always visible */
+  .overlay {
+    display: none !important;
+  }
+}
